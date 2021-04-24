@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Playlist matches the snapshot 1`] = `
+<div
+  className="Playlist"
+>
+  <input
+    defaultValue="New Playlist"
+    onChange={[Function]}
+  />
+  <TrackList
+    isRemoval={true}
+  />
+  <button
+    className="Playlist-save"
+  >
+    SAVE TO SPOTIFY
+  </button>
+</div>
+`;
