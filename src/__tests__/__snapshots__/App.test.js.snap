@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App matches the snapshot 1`] = `
+<div>
+  <h1>
+    Ja
+    <span
+      className="highlight"
+    >
+      mmm
+    </span>
+    ing
+  </h1>
+  <div
+    className="App"
+  >
+    <SearchBar
+      onSearch={[Function]}
+    />
+    <div
+      className="App-playlist"
+    >
+      <SearchResults
+        onAdd={[Function]}
+        searchResults={Array []}
+      />
+      <Playlist
+        onNameChange={[Function]}
+        onRemove={[Function]}
+        playlistName="My Playlist"
+        playlistTracks={Array []}
+      />
+    </div>
+  </div>
+</div>
+`;
