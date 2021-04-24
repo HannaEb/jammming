@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TrackList matches the snapshot 1`] = `
+<div
+  className="TrackList"
+>
+  <Track
+    track="Track1"
+  />
+  <Track
+    track="Track2"
+  />
+  <Track
+    track="Track3"
+  />
+</div>
+`;

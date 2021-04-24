@@ -5,7 +5,7 @@ jest.mock('../Components/Track/Track', () => 'Track');
 
 describe('TrackList', () => {
     it('matches the snapshot', () => {
-        const tracks = ['track1', 'track2', 'track3']
+        const tracks = ['Track1', 'Track2', 'Track3']
         const tree = renderer.create(<TrackList tracks={tracks} />).toJSON();
         expect(tree).toMatchSnapshot();
     });

@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Track matches the snapshot 1`] = `
+<div
+  className="Track"
+>
+  <div
+    className="Track-information"
+  >
+    <h3>
+      Name
+    </h3>
+    <p>
+      Artist
+       | 
+      Album
+    </p>
+  </div>
+  <button
+    className="Track-action"
+    onClick={[Function]}
+  >
+    +
+  </button>
+</div>
+`;
