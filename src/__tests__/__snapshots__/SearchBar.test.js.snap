@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SearchBar matches the snapshot 1`] = `
+<div
+  className="SearchBar"
+>
+  <input
+    onChange={[Function]}
+    placeholder="Enter A Song, Album, or Artist"
+  />
+  <button
+    className="SearchButton"
+    onClick={[Function]}
+  >
+    SEARCH
+  </button>
+</div>
+`;
