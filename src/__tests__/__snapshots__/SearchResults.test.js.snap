@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SearchResults matches the snapshot 1`] = `
+<div
+  className="SearchResults"
+>
+  <h2>
+    Results
+  </h2>
+  <TrackList
+    isRemoval={false}
+  />
+</div>
+`;
