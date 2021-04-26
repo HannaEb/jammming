@@ -12,6 +12,25 @@ describe('App', () => {
         expect(tree).toMatchSnapshot();
     });
 
+    describe('addTrack', () => {
+        it('does not update the state if track is already on playlist', () => {
+            const wrapper = shallow(<App />);
+            const instance = wrapper.instance();
+            const track = 'New Track';
+            instance.addTrack(track);
+            instance.addTrack(track);
+            expect(wrapper.state().playlistTracks).toHaveLength(1);
+        })
+
+        it('updates the state if track is not yet on playlist', () => {
+            const wrapper = shallow(<App />);
+            const instance = wrapper.instance();
+            const track = 'New Track';
+            instance.addTrack(track);
+            expect(wrapper.state().playlistTracks).toContain('New Track');
+        })
+    })
+
     describe('removeTrack', () => {
         it('updates the state', () => {
             const wrapper = shallow(<App />);
