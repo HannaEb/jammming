@@ -1,5 +1,6 @@
 import App from '../Components/App/App.js';
 import renderer from 'react-test-renderer';
+import { shallow } from 'enzyme';
 
 jest.mock('../Components/SearchBar/SearchBar.js', () => 'SearchBar');
 jest.mock('../Components/SearchResults/SearchResults.js', () => 'SearchResults');
@@ -9,5 +10,15 @@ describe('App', () => {
     it('matches the snapshot', () => {
         const tree = renderer.create(<App />).toJSON();
         expect(tree).toMatchSnapshot();
+    });
+
+    describe('updatePlaylistName', () => {
+        it('updates the state', () => {
+            const wrapper = shallow(<App />);
+            const instance = wrapper.instance();
+            const name = 'New Name';
+            instance.updatePlaylistName(name);
+            expect(wrapper.state().playlistName).toEqual('New Name')
+        });
     });
 });
