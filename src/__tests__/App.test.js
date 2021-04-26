@@ -6,6 +6,9 @@ jest.mock('../Components/SearchBar/SearchBar.js', () => 'SearchBar');
 jest.mock('../Components/SearchResults/SearchResults.js', () => 'SearchResults');
 jest.mock('../Components/Playlist/Playlist.js', () => 'Playlist');
 
+const wrapper = shallow(<App />);
+const instance = wrapper.instance();
+
 describe('App', () => {
     it('matches the snapshot', () => {
         const tree = renderer.create(<App />).toJSON();
@@ -13,28 +16,22 @@ describe('App', () => {
     });
 
     describe('addTrack', () => {
+        const track = 'New Track';
+
         it('does not update the state if track is already on playlist', () => {
-            const wrapper = shallow(<App />);
-            const instance = wrapper.instance();
-            const track = 'New Track';
             instance.addTrack(track);
             instance.addTrack(track);
             expect(wrapper.state().playlistTracks).toHaveLength(1);
-        })
+        });
 
         it('updates the state if track is not yet on playlist', () => {
-            const wrapper = shallow(<App />);
-            const instance = wrapper.instance();
-            const track = 'New Track';
             instance.addTrack(track);
             expect(wrapper.state().playlistTracks).toContain('New Track');
-        })
-    })
+        });
+    });
 
     describe('removeTrack', () => {
         it('updates the state', () => {
-            const wrapper = shallow(<App />);
-            const instance = wrapper.instance();
             const track = 'New Track';
             instance.addTrack(track);
             instance.removeTrack(track);
@@ -44,8 +41,6 @@ describe('App', () => {
 
     describe('updatePlaylistName', () => {
         it('updates the state', () => {
-            const wrapper = shallow(<App />);
-            const instance = wrapper.instance();
             const name = 'New Name';
             instance.updatePlaylistName(name);
             expect(wrapper.state().playlistName).toEqual('New Name')
