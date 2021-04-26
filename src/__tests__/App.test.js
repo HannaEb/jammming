@@ -12,6 +12,17 @@ describe('App', () => {
         expect(tree).toMatchSnapshot();
     });
 
+    describe('removeTrack', () => {
+        it('updates the state', () => {
+            const wrapper = shallow(<App />);
+            const instance = wrapper.instance();
+            const track = 'New Track';
+            instance.addTrack(track);
+            instance.removeTrack(track);
+            expect(wrapper.state().playlistTracks).not.toContain('New Track');
+        });
+    });
+
     describe('updatePlaylistName', () => {
         it('updates the state', () => {
             const wrapper = shallow(<App />);
