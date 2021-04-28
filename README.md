@@ -31,7 +31,12 @@ Then open [http://localhost:3000](http://localhost:3000) to view the application
 
 ## Testing
 
-Not yet implemented.
+Jest, Enzyme. To run the tests, simply run `npm test` in your terminal.
+
+
+## Progress
+
+The test suite needs to be improved. 
 
 
 ## Author
